@@ -1,4 +1,4 @@
-# UniConnect
+# UniCore
 A platform for university students to book hostels, find jobs/internships, and make biometric payments.
 
 ## Structure
