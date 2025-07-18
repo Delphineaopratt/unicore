@@ -2,20 +2,11 @@ const express = require('express');
 const router = express.Router();
 const Hostel = require('../Models/Hostel');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
-
-// const authMiddleware = (req, res, next) => {
-//   const token = req.headers['authorization']?.split(' ')[1];
-//   if (!token) return res.status(401).json({ message: 'No token provided' });
-
-//   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-//     if (err) return res.status(403).json({ message: 'Invalid token' });
-//     req.user = decoded;
-//     next();
-//   });
-// };
-
+const multer = require('multer');
+const cloudinary = require('cloudinary').v2;
 const authMiddleware = require('../middleware/auth');
+
+require('dotenv').config();
 
 // Create
 router.post('/', authMiddleware, async (req, res) => {
@@ -71,5 +62,57 @@ router.delete('/:id', authMiddleware, async (req, res) => {
     res.status(500).json({ message: 'Error deleting hostel', error });
   }
 });
+
+// Configure multer to handle file uploads
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+router.use(authMiddleware);
+
+// Create a new hostel with image upload
+router.post('/', upload.single('image'), async (req, res) => {
+  const { name, location, address, pricePerMonth, capacity, availableRooms, description, amenities } = req.body;
+  try {
+    let imageUrl = '';
+    if (req.file) {
+      const uploadResponse = await new Promise((resolve, reject) => {
+        cloudinary.uploader.upload_stream({ resource_type: 'image' }, (error, result) => {
+          if (error) reject(error);
+          else resolve(result);
+        }).end(req.file.buffer);
+      });
+      imageUrl = uploadResponse.secure_url;
+    }
+
+    const hostel = new Hostel({
+      name,
+      location,
+      address,
+      pricePerMonth,
+      capacity,
+      availableRooms,
+      description,
+      amenities,
+      postedBy: req.user.id,
+      imageUrl,
+    });
+    await hostel.save();
+    res.status(201).json(hostel);
+  } catch (error) {
+    res.status(500).json({ message: 'Error creating hostel', error });
+  }
+});
+
+// Read all hostels
+router.get('/', async (req, res) => {
+  try {
+    const hostels = await Hostel.find().populate('postedBy', 'email');
+    res.json(hostels);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching hostels', error });
+  }
+});
+
+
 
 module.exports = router;

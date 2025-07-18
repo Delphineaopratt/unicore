@@ -11,7 +11,8 @@ const hostelSchema = new mongoose.Schema({
   amenities: [String],
   postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Employer or admin
   createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
+  updatedAt: { type: Date, default: Date.now },
+  imageUrl: { type: String }
 });
 
 module.exports = mongoose.model('Hostel', hostelSchema);
