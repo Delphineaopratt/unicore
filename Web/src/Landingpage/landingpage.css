@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e0e0e0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6b48ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.features, .why-choose, .team {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features h2, .why-choose h2, .team h2 {
+  margin-bottom: 30px;
+}
+
+.feature-item, .choose-item, .team-member {
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+}
+
+.feature-item img, .team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-item button, .choose-item, .team-member a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #6b48ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
