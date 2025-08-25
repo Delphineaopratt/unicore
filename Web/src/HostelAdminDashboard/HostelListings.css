@@ -1,0 +1,104 @@
+/* General layout */
+.hostel-admin-dashboard {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+}
+
+.tabs button.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Hostel Cards */
+.hostel-cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.hostel-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hostel-image-slider {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.hostel-image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hostel-info {
+  padding: 15px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hostel-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hostel-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.btn-view-hostel {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-view-hostel:hover {
+  background-color: #4338ca;
+}

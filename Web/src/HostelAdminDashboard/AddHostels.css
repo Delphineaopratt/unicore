@@ -1,0 +1,113 @@
+/* General layout */
+.hostel-admin-dashboard {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Form sections */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="number"]:focus {
+  border-color: #4f46e5;
+}
+
+/* File upload */
+.file-upload-row {
+  align-items: center;
+}
+
+.file-upload-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #e0e7ff;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload-info {
+  font-size: 13px;
+  color: #999;
+  margin-left: 10px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn-clear {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background-color: #d1d5db;
+}
+
+.btn-upload {
+  background-color: #4f46e5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-upload:hover {
+  background-color: #4338ca;
+}

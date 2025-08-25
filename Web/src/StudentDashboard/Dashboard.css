@@ -1,0 +1,102 @@
+.slideshow-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 70px;
+  position: relative;
+  background: inherit;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.slide-text {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-right: 20px;
+}
+
+.slide-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.slide-text p {
+  font-size: 1rem;
+  color: #cfcbcb;
+  line-height: 1.5;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #6c63ff;
+}
+
+.daily-advice-section {
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.advice-cards {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.advice-card, .quote-card {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advice-text h4, .quote-text h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #6b46c1;
+}
+
+.advice-text p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.3;
+}
+
+.quote-text blockquote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.quote-text cite {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 600;
+}

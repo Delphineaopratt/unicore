@@ -1,0 +1,55 @@
+.jobs-page {
+  padding: 30px;
+  background-color: #f4f6fc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.jobs-header {
+  background: linear-gradient(to right, #0f1d48, #2f4cb6);
+  color: white;
+  height: 150px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.personalize-btn {
+  margin-top: 100px;
+  padding: 12px 25px;
+  background-color: #5d5fef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.featured-jobs, .reviews {
+  margin-top: 40px;
+}
+
+.job-cards {
+  display: grid;
+  gap: 60px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.job-card {
+  background: white;
+  border-radius: 10px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+.job-card button {
+  background-color: #173aa2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+/* General layout */
+.hostel-admin-dashboard {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.main-content p {
+  font-size: 15px;
+  color: #666;
+}
